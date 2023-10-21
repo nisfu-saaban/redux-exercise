@@ -1,0 +1,7 @@
+npx sequelize-cli model:generate --name User --attributes username:string,email:string,password:string
+
+npx sequelize-cli model:generate --name Profile --attributes fullName:string,address:string,contry:string,userId:integer
+
+npm sequelize-cli model:generate --name experience --attributes name:string,description:text
+
+npx sequelize-cli model:generate --name Posting --attributes title:string,description:string,isPosting:boolean,userId:integer
