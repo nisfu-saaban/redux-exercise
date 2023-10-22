@@ -1,7 +1,22 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import { login } from '../axios/userAxios';
+import { useDispatch, useSelector } from 'react-redux'
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
+
+    const [form, setForm] = useState({
+        username: "",
+        password: ""
+    })
+
+    const dispatch = useDispatch();
+
+    const { loginResult } = useSelector(state => state.UserReducer)
+
+    const submitLogin = (form) => {
+        dispatch(login(form))
+    }
 
     return (
 
@@ -13,18 +28,24 @@ const LoginPage = () => {
                         <div className="mb-3 row">
                             <label for="staticEmail" className="col-sm-2 col-form-label">Username</label>
                             <div className="col-sm-10">
-                                <input type="text" className="form-control shadow" id="staticEmail" />
+                                <input
+                                    onChange={(e) => setForm({ ...form, username: e.target.value })}
+                                    type="text" className="form-control shadow" id="staticEmail" />
                             </div>
                         </div>
                         <div className="mb-3 row">
                             <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
                             <div className="col-sm-10">
-                                <input type="password" className="form-control shadow" id="inputPassword" />
+                                <input
+                                    onChange={(e) => setForm({ ...form, password: e.target.value })}
+                                    type="password" name='password' className="form-control shadow" id="inputPassword" />
                             </div>
                         </div>
                         <div className='d-flex'>
-                            <button type="submit" className="btn btn-dark btn-large shadow-lg">Login</button>
-                            <a href='#' className='ms-auto mt-3 link-underline-light'>Register</a>
+                            <Link
+                                onClick={() => submitLogin()}
+                                to={'/'} type="submit" className="btn btn-dark btn-large shadow-lg">Login</Link>
+                            <Link to='/register' className='ms-auto mt-3 link-underline-light'>Register</Link>
                         </div>
                     </form>
                 </div>

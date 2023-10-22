@@ -27,6 +27,10 @@
   font-weight: 600;
 }
 
+.nav-bg{
+  background-color: #f0f0f0;
+}
+
 .btn-large{
   margin-top: 15px;
   width: 20%;
@@ -36,6 +40,11 @@
   color: var(--c-dark);
   background-color: transparent;
   border-color: var(--c-dark);
+}
+
+.sign{
+  display: flex;
+  gap: 2rem;
 }
 
 .login-bg{
@@ -125,7 +134,12 @@
 .flex{
   display: flex;
   justify-content: space-between;
-  gap: 9rem;
+  gap: 6rem;
   background-color: #f0f0f0;
   height: 88vh;
+  
+}
+
+.about-container{
+  background-color: #f0f0f0;
 }
