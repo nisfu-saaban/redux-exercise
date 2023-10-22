@@ -1,11 +1,15 @@
-
-import './App.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
+import { LoginPage, HomePage } from './pages';
+import { Navbar, MainContent } from './components';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <>
+      <Navbar></Navbar>
+      <MainContent></MainContent>
+    </>
   );
 }
 

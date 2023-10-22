@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+:root{
+  --c-primary: #0d6efd;
+  --c-secondary: #6c757d;
+  --c-success: #28a745;
+  --c-danger: #dc3545;
+  --c-info: #17a2b8;
+  --c-warning: #ffc107;
+  --c-light: #f8f9fa;
+  --c-dark: #343a40;
+
+  --ff-hiro-title: "Times New Roman", Times, serif;
+  --ff-hiro-subtitle: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app{
+  background-color: #D0D4CA;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-company{
+  font-family: var(--ff-hiro-title);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.btn-large{
+  margin-top: 15px;
+  width: 20%;
+}
+
+.btn-large:hover{
+  color: var(--c-dark);
+  background-color: transparent;
+  border-color: var(--c-dark);
+}
+
+.login-bg{
+  background-color: #F0F0F0;
+}
+
+.hiro-container{
+  background-color: var(--c-warning);
+  padding: 2rem;
+}
+
+.hiro-bg{
+  background-image: url("https://img.freepik.com/free-vector/blogging-concept-illustration_114360-4480.jpg?w=826&t=st=1697935715~exp=1697936315~hmac=436b76001307e574fb5a4883190fb14481ea6c765d0170412e4effdb97617d16");
+  background-size: 30rem;
+  background-repeat: no-repeat;  
+}
+
+.hiro h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 6rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.hiro h4{
+  font-family: var(--ff-hiro-subtitle);
+}
+
+.hiro button{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.trend-container{
+  background-color: #f0f0f0;
+}
+
+.trend-post{
+  color: #000;
+  font-family: var(--ff-hiro-subtitle);
+  font-weight: 600;
+  margin-left: 3rem;
+}
+
+.trend-post svg{
+  font-size: 1.7rem;
+  margin-right: 1.5rem;
+}
+
+.trend-content{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.trend-row{
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.trend-items{
+  width: 30%;
+  padding: .5rem;
+}
+
+.trend-items h6{
+  margin-top: -1rem;
+}
+
+.items h6{
+  margin-top: -1rem;
+}
+
+.content{
+  margin-top: 4rem;
+  max-width: 30%;
+  
+}
+
+.content svg{
+  font-size: 56px;
+  color: var(--c-warning);
+  margin-bottom: 2rem;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  gap: 9rem;
+  background-color: #f0f0f0;
+  height: 88vh;
 }
