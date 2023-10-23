@@ -1,6 +1,9 @@
 import React from 'react'
 
 const PostingPage = () => {
+
+const {loginResult} = useSelector(state => state.UserReducer)
+
     return (
         <div className='p-3'>
 
